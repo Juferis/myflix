@@ -1,7 +1,7 @@
 import React from "react";
 // eslint-disable-next-line
 export default () => (
-  <header>
+  <header className="nav">
     <ul>
       <li>
         <a href="/">Home</a>
