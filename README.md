@@ -11,11 +11,13 @@
 
 ## API Verbs
 
-- [ ] Now Playing(Movies)
-- [ ] Upcomming(Moives)
-- [ ] Popular(TV, Moives)
-- [ ] Top Rated(TV, Moives)
-- [ ] Airing Today(TV)
+- [x] Now Playing(Movies)
+- [x] Upcomming(Moives)
+- [x] Popular(TV, Moives)
+- [x] Top Rated(TV)
+- [x] Airing Today(TV)
+- [ ] Tv Show Deatail
+- [ ] Moive Deatail
 
 ## 1.0 사용한 도구
 
