@@ -9,9 +9,19 @@
 - [ ] TV
 - [ ] Search
 
+## API Verbs
+
+- [ ] Now Playing(Movies)
+- [ ] Upcomming(Moives)
+- [ ] Popular(TV, Moives)
+- [ ] Top Rated(TV, Moives)
+- [ ] Airing Today(TV)
+
 ## 1.0 사용한 도구
 
 - React Router : 간단한 컴포넌트 묶음, React에게 시작 라우터 지정가능
+- [themoviedb](https://www.themoviedb.org/) : 영화 데이터를 받아올 수 있는 API
+- Axios : request 작업하기 위함과 api의 데이터를 받아오기 위해 사용
 
 ## 2.0 새로 학습한 내용
 
