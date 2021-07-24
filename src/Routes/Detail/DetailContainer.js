@@ -32,11 +32,10 @@ export default class extends React.Component {
     let result = null;
     try {
       if (isMovie) {
-        const request = await moviesApi.movieDetail(parsedId);
-        result = request.data;
+        // const {data: result}와 같다 위에 let으로 변수를 생성해서 이런 방식을 이용
+        ({ data: result } = await moviesApi.movieDetail(parsedId));
       } else {
-        const request = await tvApi.showDetail(parsedId);
-        result = request.data;
+        ({ data: result } = await tvApi.showDetail(parsedId));
       }
     } catch {
       this.setState({ error: "정보를 불러올 수 없습니다." });
