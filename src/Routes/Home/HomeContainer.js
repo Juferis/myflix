@@ -1,3 +1,4 @@
+import { moviesApi } from "api";
 import React from "react";
 import HomePresenter from "./HomePresenter";
 
@@ -11,7 +12,35 @@ export default class extends React.Component {
     loading: true,
   };
 
-  // 여기에 로직을 추가할 예정 api가져오기, error처리 등
+  // api가져오기, error처리 등 로직들
+  async componentDidMount() {
+    try {
+      // nowPlaying안에 data 안에 results가 있다. console.log()확인시
+      const {
+        data: { results: nowPlaying }, // 혼란을 피하기 위해 각각의 이름으로 설정
+      } = await moviesApi.nowPlaying();
+      const {
+        data: { results: upcoming },
+      } = await moviesApi.upcoming();
+      const {
+        data: { results: popular },
+      } = await moviesApi.popular();
+      this.setState({
+        // React.Componet부분의 state에 null대신 각각 받아온 데이터를 넣어준다
+        nowPlaying,
+        upcoming,
+        popular,
+      });
+    } catch {
+      this.setState({
+        error: "영화를 가져올 수 없습니다.",
+      });
+    } finally {
+      this.setState({
+        loading: false,
+      });
+    }
+  }
 
   render() {
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
