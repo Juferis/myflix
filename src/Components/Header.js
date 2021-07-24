@@ -55,5 +55,5 @@ const Headers = (
     </List>
   </Header>
 );
-
+// withRouter은 현재 라우터의 위치를 알 수 있게 도와준다.
 export default withRouter(Headers);
