@@ -13,12 +13,22 @@ export default class extends React.Component {
     loading: false,
   };
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
     // 검색 후 엔터키 입력하면 발생하는 이벤트
+    event.preventDefault();
     const { searchTerm } = this.state;
     if (searchTerm !== "") {
       this.searchByTerm();
     }
+  };
+
+  updateTerm = (event) => {
+    const {
+      target: { value },
+    } = event;
+    this.setState({
+      searchTerm: value,
+    });
   };
 
   searchByTerm = async () => {
@@ -52,6 +62,7 @@ export default class extends React.Component {
         loading={loading}
         searchTerm={searchTerm}
         handleSubmit={this.handleSubmit}
+        updateTerm={this.updateTerm}
       />
     );
   }
