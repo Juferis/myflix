@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
 import Message from "Components/Message";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -19,21 +20,21 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
         nowPlaying.length > 0 && (
           <Section title="현재 상영중">
             {nowPlaying.map((movie) => (
-              <span key={movie.id}>{movie.title}</span>
+              <Poster />
             ))}
           </Section>
         )}
       {popular && popular.length > 0 && (
         <Section title="인기 콘텐츠">
           {popular.map((movie) => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster />
           ))}
         </Section>
       )}
       {upcoming && upcoming.length > 0 && (
         <Section title="곧 개봉작">
           {upcoming.map((movie) => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster />
           ))}
         </Section>
       )}
