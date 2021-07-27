@@ -6,7 +6,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     const {
-      loaction: { pathname },
+      location: { pathname }, // console.log(props) 하면 상세정보 링크를 알 수 있다.
     } = props; // movie검색인지 tv검색인지 알아야 한다.
     this.state = {
       result: null,
