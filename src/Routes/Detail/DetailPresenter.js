@@ -2,6 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Loader from "Components/Loader";
 
 const Container = styled.div`
@@ -70,9 +71,19 @@ const Overview = styled.p`
 // Detail을 위해 영화나 TV를 누르면 가는 Detail 창에서 개발자 창을 통해 받아오는 데이터를 확인하면 나온다.
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
-    <Loader />
+    <>
+      <Helmet>
+        <title>Loading | Myflix</title>
+      </Helmet>
+      <Loader />
+    </>
   ) : (
     <Container>
+      <Helmet>
+        <title>{`${
+          result?.title ? result.title : result?.name
+        } | Myflix`}</title>
+      </Helmet>
       <BackDrop
         bgImage={`https://image.tmdb.org/t/p/original${result?.backdrop_path}`}
       />

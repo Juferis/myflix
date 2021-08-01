@@ -4,10 +4,10 @@
 
 ## Pages
 
-- [ ] Home
-- [ ] Deatil
-- [ ] TV
-- [ ] Search
+- [x] Home
+- [x] Deatil
+- [x] TV
+- [x] Search
 
 ## API Verbs
 
@@ -19,6 +19,12 @@
 - [x] Tv Show Deatail
 - [x] Moive Deatail
 - [x] Search(TV, Movies)
+
+## 다음에 제작할 것
+
+- [ ] 트레일러 보여주기
+- [ ] 영화의 정보 자세히 보여주기
+- [ ] 장르별로 화면에 보여주기
 
 ## 1.0 사용한 도구
 
